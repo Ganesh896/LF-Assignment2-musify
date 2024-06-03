@@ -1,0 +1,185 @@
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/Proxima-Nova-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/Proxima-Nova-Bold-Italic.otf") format("opentype");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/Proxima-Nova-Semibold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/Proxima-Nova-Semibold-Italic.otf") format("opentype");
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Proxima Nova Rg";
+    src: url("../fonts/Proxima-Nova-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Proxima Nova Rg";
+    src: url("../fonts/Proxima-Nova-Regular-Italic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/Proxima-Nova-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/Proxima-Nova-Light-Italic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+:root {
+    --large-title: 5.3125rem;
+    --title: 4rem;
+    --subtitle: 2.8125rem;
+    --meta-title: 2rem;
+    --large-text: 1.5rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "Proxima Nova", sans-serif;
+    // font-family: "Nunito Sans", sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    background: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $black;
+    font-weight: 600;
+}
+
+p {
+    color: $gray-dark;
+}
+
+.dark__theme .show-in-light {
+    display: none;
+}
+
+.light__theme .show-in-dark {
+    display: none;
+}
+
+.section__title {
+    text-align: center;
+    h2 {
+        @include typography(45px, 700);
+    }
+
+    h4 {
+        @include typography(28px, 700);
+        text-align: center;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.button {
+    padding: 1.0625rem;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 20px;
+    box-shadow: 0px 0px 18px 0px #f14a16;
+
+    cursor: pointer;
+
+    &__primary {
+        border: none;
+        background: $primary;
+        color: $white;
+    }
+
+    &__secondary {
+        background: none;
+        border: 3px solid $primary;
+        color: $primary;
+    }
+}
+
+.m {
+    &__tb {
+        margin-top: 3.75rem;
+        margin-bottom: 3.75rem;
+
+        &--t {
+            margin-top: 3.75rem;
+        }
+
+        &--b {
+            margin-bottom: 3.75rem;
+        }
+    }
+}
+
+.p {
+    &__tb {
+        padding-top: 3.75rem;
+        padding-bottom: 3.75rem;
+
+        &--t {
+            padding-top: 3.75rem;
+        }
+
+        &--b {
+            padding-bottom: 3.75rem;
+        }
+    }
+}
+
+input {
+    outline: none;
+    box-shadow: none;
+    color: $white;
+
+    @include typography(clamp(16px, 2vw, 20px), 500);
+}

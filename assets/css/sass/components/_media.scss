@@ -27,14 +27,7 @@
 }
 @media (min-width: 576px) {
     .whyus__items {
-        // flex-direction: row;
         align-items: center;
-
-        // &--item {
-        //     p {
-        //         font-size: 32px;
-        //     }
-        // }
     }
 }
 @media (min-width: 650px) {
@@ -198,7 +191,7 @@
             width: 100%;
             max-width: 500px;
             &--big {
-                display: flex;
+                @include flex-box(flex-start, flex-start, 8px);
                 flex-direction: column;
             }
 
@@ -296,7 +289,7 @@
 
 @media (min-width: 991px) {
     html {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .container {
@@ -311,13 +304,12 @@
             margin-top: 0;
             flex-basis: 50%;
             max-width: 650px;
-            // margin-left: 4%;
             padding-left: 20px;
             margin: 0 auto;
 
-            h1 {
-                font-size: clamp(50px, 8vw, 55px);
-            }
+            // h1 {
+            //     font-size: clamp(50px, 8vw, 55px);
+            // }
         }
 
         &__bg {
@@ -377,9 +369,9 @@
         &__content {
             margin-top: 6.25rem;
 
-            h1 {
-                font-size: clamp(50px, 10vw, 60px);
-            }
+            // h1 {
+            //     font-size: clamp(50px, 10vw, 60px);
+            // }
 
             &--buttons {
                 .button {
@@ -400,10 +392,9 @@
         &__content {
             margin-top: 6.25rem;
 
-            h1 {
-                font-size: clamp(50px, 10vw, 85px);
-                line-height: 100px;
-            }
+            // h1 {
+            //     line-height: 100px;
+            // }
 
             p {
                 font-size: 24px;

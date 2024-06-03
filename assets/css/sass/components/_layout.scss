@@ -285,7 +285,9 @@ header {
 
         &--left {
             h1 {
-                @include typography(50px, 700);
+                // @include typography(50px, 700);
+                @include typography(var(--large-title), 700);
+
                 span {
                     color: $primary;
                 }
@@ -675,7 +677,7 @@ header {
 
         p,
         li {
-            @include typography(clamp(16px, 2vw, 22px), 400);
+            @include typography(clamp(16px, 2vw, 20px), 400);
             margin-top: 8px;
             color: $white;
         }

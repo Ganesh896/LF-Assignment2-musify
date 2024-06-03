@@ -493,6 +493,7 @@ header.sticky i {
   min-height: 108px;
   position: relative;
   background: rgba(40, 40, 40, 0.6980392157);
+  border: 1px solid rgba(255, 255, 255, 0.6980392157);
   border-radius: 25px;
 }
 .hero__bottom--cards .product__card--img {

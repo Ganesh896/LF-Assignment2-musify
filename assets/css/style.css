@@ -24,13 +24,13 @@
   font-style: italic;
 }
 @font-face {
-  font-family: "Proxima Nova Rg";
+  font-family: "Proxima Nova";
   src: url("../fonts/Proxima-Nova-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Proxima Nova Rg";
+  font-family: "Proxima Nova";
   src: url("../fonts/Proxima-Nova-Regular-Italic.otf") format("opentype");
   font-weight: 400;
   font-style: italic;
@@ -472,6 +472,7 @@ header.sticky i {
 .hero__bottom--down--icon {
   height: 60px;
   width: 60px;
+  display: inline-block;
   border: 1px solid #1e1e1e;
   border-radius: 50%;
   text-align: center;

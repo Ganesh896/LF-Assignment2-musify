@@ -82,10 +82,10 @@ const setTheme = function (e) {
 const changeTheme = function () {
     setTheme();
     let theme = localStorage.getItem("theme");
-    document.getElementsByTagName("body")[0].classList.toggle(`${theme}`);
+    document.getElementsByTagName("body")[0].classList.toggle(`${theme ? theme : "light__theme"}`);
 };
 
-document.getElementsByTagName("body")[0].classList.toggle(`${localStorage.getItem("theme")}`);
+document.getElementsByTagName("body")[0].classList.toggle(`${localStorage.getItem("theme") ? localStorage.getItem("theme") : "light__theme"}`);
 
 themeButton.addEventListener("click", changeTheme);
 

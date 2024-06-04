@@ -78,6 +78,10 @@ header {
         i {
             color: $white;
         }
+
+        .fa-magnifying-glass {
+            color: #858585;
+        }
     }
 }
 
@@ -208,7 +212,7 @@ header {
 
         .menu__items {
             @include positionTL(fixed, 0, -100%);
-            @include hw(100%, 100%);
+            // @include hw(100%, 100%);
             // position: relative;
             @include hw(100%, 60%);
             background: $primary;

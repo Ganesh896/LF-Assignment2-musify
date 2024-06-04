@@ -243,6 +243,9 @@ header.sticky a,
 header.sticky i {
   color: #fff;
 }
+header.sticky .fa-magnifying-glass {
+  color: #858585;
+}
 
 .header {
   display: flex;
@@ -368,8 +371,6 @@ header.sticky i {
   position: fixed;
   top: 0;
   left: -100%;
-  height: 100%;
-  width: 100%;
   height: 100%;
   width: 60%;
   background: #f14a16;
@@ -925,6 +926,12 @@ header.sticky i {
     flex-direction: row;
     gap: 32px;
   }
+  .header__search {
+    display: none;
+  }
+  .header__content--right i:first-child {
+    display: block;
+  }
 }
 @media (min-width: 576px) {
   .whyus__items {
@@ -937,12 +944,6 @@ header.sticky i {
   }
   header {
     padding-bottom: 0;
-  }
-  .header__search {
-    display: none;
-  }
-  .header__content--right i:first-child {
-    display: block;
   }
   .hero__bottom {
     flex-direction: row;
@@ -1076,6 +1077,7 @@ header.sticky i {
     position: relative;
     height: 100%;
     width: 60%;
+    left: 0;
     width: 100%;
     background: none;
   }

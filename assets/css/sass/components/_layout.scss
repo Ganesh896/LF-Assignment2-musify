@@ -64,16 +64,6 @@
     }
 }
 
-.light__theme {
-    .hero {
-        &__bg {
-            &--dark {
-                display: none;
-            }
-        }
-    }
-}
-
 // header
 header {
     @include positionTL(fixed, 0, 0);
@@ -201,6 +191,7 @@ header {
                 font-size: 1.25rem;
                 margin-left: 3.875rem;
                 display: none;
+                box-shadow: none;
             }
         }
     }
@@ -337,6 +328,17 @@ header {
             text-align: center;
             line-height: 60px;
             z-index: 9;
+            // transform: scale(1);
+            animation: pulseButton 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseButton {
+            0% {
+                box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+            }
+            100% {
+                box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+            }
         }
         &--cards {
             z-index: 9;

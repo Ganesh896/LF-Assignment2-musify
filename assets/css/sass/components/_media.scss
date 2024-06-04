@@ -224,16 +224,16 @@
 
         &__content {
             &--items {
-                position: static;
+                // position: static;
                 flex-direction: row;
                 background: none;
                 // gap: 50px;
                 // color: ;
 
                 .menu__items {
-                    position: relative;
-                    @include hw(100%, 60%);
-                    left: 0;
+                    position: static;
+                    // @include hw(100%, 60%);
+                    // left: 0;
                     width: 100%;
                     background: none;
                 }

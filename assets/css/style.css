@@ -1069,15 +1069,11 @@ header.sticky .fa-magnifying-glass {
     display: none;
   }
   .header__content--items {
-    position: static;
     flex-direction: row;
     background: none;
   }
   .header__content--items .menu__items {
-    position: relative;
-    height: 100%;
-    width: 60%;
-    left: 0;
+    position: static;
     width: 100%;
     background: none;
   }

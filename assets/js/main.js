@@ -1,3 +1,4 @@
+// hero product slider
 $(".hero__product--slider").owlCarousel({
     loop: true,
     // margin: 200,
@@ -24,6 +25,7 @@ $(".hero__product--slider").owlCarousel({
     },
 });
 
+// product slider
 $(".product__slider").owlCarousel({
     loop: true,
     margin: 20,
@@ -62,14 +64,30 @@ menuOpenBtn.addEventListener("click", function () {
     navMenu.style.left = "0";
 });
 
-menuCloseBtn.addEventListener("click", function () {
+const closeNav = function () {
     navMenu.style.left = "-100%";
-});
+};
+menuCloseBtn.addEventListener("click", closeNav);
+
+// active link
+var header = document.querySelector(".header");
+var navLinks = header.querySelectorAll(".header__items--link");
+
+for (var i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", function () {
+        closeNav(); //close side navbar
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+        console.log(this);
+    });
+}
 
 //changing theme
 const themeCheckbox = document.getElementById("checkbox");
 const themeButton = document.querySelector(".theme__button");
 
+// saving theme on localStorage
 const setTheme = function (e) {
     localStorage.removeItem("theme");
     if (themeCheckbox.checked) {
@@ -79,16 +97,18 @@ const setTheme = function (e) {
     }
 };
 
+// adding theme from localStorage
 const changeTheme = function () {
     setTheme();
     let theme = localStorage.getItem("theme");
     document.getElementsByTagName("body")[0].classList.toggle(`${theme ? theme : "light__theme"}`);
 };
 
+// setting default theme
 document.getElementsByTagName("body")[0].classList.toggle(`${localStorage.getItem("theme") ? localStorage.getItem("theme") : "light__theme"}`);
+themeButton.addEventListener("click", changeTheme); //changing theme on nav toggle button
 
-themeButton.addEventListener("click", changeTheme);
-
+// retaining the toggle button state on refress
 if (localStorage.getItem("theme") === "dark__theme") {
     themeCheckbox.checked = true;
 } else {
@@ -96,13 +116,12 @@ if (localStorage.getItem("theme") === "dark__theme") {
 }
 
 // sticky navbar
-// STICKY NAVBAR
 window.addEventListener("scroll", function () {
     const navBar = document.querySelector(".navbar");
     navBar.classList.toggle("sticky", this.window.scrollY > 100);
 });
 
-//Timer Countdown
+//timer countdown
 var offterTill = new Date("Aug 3, 2024").getTime();
 console.log(offterTill);
 

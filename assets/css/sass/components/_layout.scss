@@ -524,6 +524,7 @@ header {
             @include flex-box(center, center, 0);
             @include hw(106px, 106px);
             background: $secondary;
+            padding: 8px;
             border-radius: 50%;
             text-align: center;
 

@@ -666,6 +666,7 @@ header.sticky i {
   height: 106px;
   width: 106px;
   background: #370665;
+  padding: 8px;
   border-radius: 50%;
   text-align: center;
 }

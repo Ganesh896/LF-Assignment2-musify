@@ -197,16 +197,22 @@ header {
     }
 
     &__content--items {
-        @include positionTL(fixed, 0, -100%);
-        @include hw(100%, 100%);
-        background: rgba(0, 0, 0, 0.4);
+        &.overlay {
+            @include positionTL(fixed, 0, 0);
+            @include hw(100%, 100%);
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 999;
+        }
+
         transition: all 0.5s ease-in-out;
-        z-index: 999;
 
         .menu__items {
-            position: relative;
+            @include positionTL(fixed, 0, -100%);
+            @include hw(100%, 100%);
+            // position: relative;
             @include hw(100%, 60%);
             background: $primary;
+            transition: all 0.5s ease-in-out;
         }
     }
 

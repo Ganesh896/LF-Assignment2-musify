@@ -58,14 +58,17 @@ $(".product__slider").owlCarousel({
 
 // nav menu
 const navMenu = document.querySelector(".header__content--items");
+const menuItems = document.querySelector(".menu__items");
 const menuOpenBtn = document.querySelector(".header__menu");
 const menuCloseBtn = document.querySelector(".header__close--btn");
 menuOpenBtn.addEventListener("click", function () {
-    navMenu.style.left = "0";
+    menuItems.style.left = "0";
+    navMenu.classList.toggle("overlay");
 });
 
 const closeNav = function () {
-    navMenu.style.left = "-100%";
+    menuItems.style.left = "-100%";
+    navMenu.classList.toggle("overlay");
 };
 menuCloseBtn.addEventListener("click", closeNav);
 

@@ -221,6 +221,9 @@ input {
 .dark__theme .header__content .checkbox-label {
   background-color: #000;
 }
+.dark__theme .header__content--right .icons {
+  color: #fff;
+}
 .dark__theme .header__menu {
   color: #fff;
 }
@@ -341,10 +344,10 @@ header.sticky .fa-magnifying-glass {
   justify-content: flex-start;
   gap: 0;
 }
-.header__content--right i {
+.header__content--right button {
   font-size: 2rem;
 }
-.header__content--right i:first-child {
+.header__content--right button:first-child {
   margin-inline: 2.5rem;
   display: none;
 }
@@ -934,7 +937,7 @@ header.sticky .fa-magnifying-glass {
   .header__search {
     display: none;
   }
-  .header__content--right i:first-child {
+  .header__content--right button:first-child {
     display: block;
   }
 }

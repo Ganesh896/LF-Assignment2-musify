@@ -30,8 +30,10 @@
             display: none;
         }
         &__content {
-            &--right i:first-child {
-                display: block;
+            &--right {
+                button:first-child {
+                    display: block;
+                }
             }
         }
     }

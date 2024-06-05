@@ -45,6 +45,12 @@
             .checkbox-label {
                 background-color: $black;
             }
+
+            &--right {
+                .icons {
+                    color: $white;
+                }
+            }
         }
         &__menu {
             color: $white;
@@ -178,7 +184,7 @@ header {
 
         &--right {
             @include flex-box(center, flex-start, 0);
-            i {
+            button {
                 font-size: 2rem;
 
                 &:first-child {
@@ -477,7 +483,7 @@ header {
     }
 }
 
-//whyus
+// whyus
 .whyus {
     p {
         color: $white;

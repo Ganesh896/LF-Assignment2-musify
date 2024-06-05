@@ -78,7 +78,10 @@ var navLinks = header.querySelectorAll(".header__items--link");
 
 for (var i = 0; i < navLinks.length; i++) {
     navLinks[i].addEventListener("click", function () {
-        closeNav(); //close side navbar
+        if (window.matchMedia("(max-width: 850px)").matches) {
+            closeNav(); //close side navbar
+        }
+
         var current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";

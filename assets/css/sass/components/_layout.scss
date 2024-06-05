@@ -344,6 +344,7 @@ header {
             border-radius: 50%;
             text-align: center;
             line-height: 60px;
+            color: $white;
             z-index: 9;
             // transform: scale(1);
             animation: pulseButton 2s ease-in-out infinite;
@@ -701,6 +702,10 @@ header {
         li {
             @include typography(clamp(16px, 2vw, 20px), 400);
             margin-top: 8px;
+            color: $white;
+        }
+
+        li a {
             color: $white;
         }
     }

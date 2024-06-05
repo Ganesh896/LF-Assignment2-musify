@@ -50,23 +50,3 @@
     bottom: #{$y-axis};
     right: #{$x-axis};
 }
-
-@mixin visibility($visible, $opacity) {
-    visibility: #{$visible};
-    opacity: #{$opacity};
-}
-
-@mixin line-clamp($number) {
-    display: -webkit-box;
-    -webkit-line-clamp: #{$number};
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-@mixin clearfix() {
-    &::after {
-        display: block;
-        clear: both;
-        content: "";
-    }
-}

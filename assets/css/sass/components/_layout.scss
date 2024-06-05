@@ -155,13 +155,9 @@ header {
             align-items: center;
         }
 
-        .fa-moon {
-            color: #f1c40f;
-            font-size: 16px;
-        }
-
+        .fa-moon,
         .fa-sun {
-            color: #f39c12;
+            color: #f1c40f;
             font-size: 16px;
         }
 
@@ -189,6 +185,11 @@ header {
                     margin-inline: 2.5rem;
                     display: none;
                 }
+            }
+            .icons {
+                border: none;
+                background: none;
+                outline: none;
             }
             .button {
                 padding: 0.875rem 2.375rem;

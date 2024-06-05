@@ -194,7 +194,7 @@ input {
 .dark__theme h6,
 .dark__theme p,
 .dark__theme a {
-  color: #fff;
+  color: #fff !important;
 }
 .dark__theme .hero__content {
   z-index: 9;
@@ -597,7 +597,7 @@ header.sticky .fa-magnifying-glass {
 }
 .trend__card--content h4 {
   color: #fff;
-  font-size: 16px;
+  font-size: clamp(20px, 3vw, 24px);
 }
 .trend__card--content ul {
   padding: 0;
@@ -606,7 +606,7 @@ header.sticky .fa-magnifying-glass {
 }
 .trend__card--content ul li {
   margin-top: 14px;
-  font-size: 12px;
+  font-size: clamp(16px, 2vw, 20px);
 }
 .trend__card--buttons {
   display: flex;
@@ -1155,12 +1155,6 @@ header.sticky .fa-magnifying-glass {
   }
   .hero__bottom {
     margin-top: -220px;
-  }
-  .trend__card--content h4 {
-    font-size: 24px;
-  }
-  .trend__card--content ul li {
-    font-size: 18px;
   }
   .offer__product--title--big {
     font-size: 38px;

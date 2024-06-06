@@ -346,6 +346,7 @@ header.sticky .fa-magnifying-glass {
 }
 .header__content--right button {
   font-size: 2rem;
+  cursor: pointer;
 }
 .header__content--right button:first-child {
   margin-inline: 2.5rem;
@@ -498,7 +499,7 @@ header.sticky .fa-magnifying-glass {
   border-radius: 50%;
   text-align: center;
   line-height: 60px;
-  color: #fff;
+  color: #000;
   z-index: 9;
   animation: pulseButton 2s ease-in-out infinite;
 }

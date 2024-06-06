@@ -186,6 +186,7 @@ header {
             @include flex-box(center, flex-start, 0);
             button {
                 font-size: 2rem;
+                cursor: pointer;
 
                 &:first-child {
                     margin-inline: 2.5rem;
@@ -344,7 +345,7 @@ header {
             border-radius: 50%;
             text-align: center;
             line-height: 60px;
-            color: $white;
+            color: $black;
             z-index: 9;
             // transform: scale(1);
             animation: pulseButton 2s ease-in-out infinite;

@@ -11,7 +11,7 @@
     h6,
     p,
     a {
-        color: $white;
+        color: $white !important;
     }
 
     .hero {
@@ -45,6 +45,12 @@
             .checkbox-label {
                 background-color: $black;
             }
+
+            &--right {
+                .icons {
+                    color: $white;
+                }
+            }
         }
         &__menu {
             color: $white;
@@ -77,6 +83,10 @@ header {
         a,
         i {
             color: $white;
+        }
+
+        .fa-magnifying-glass {
+            color: #858585;
         }
     }
 }
@@ -151,13 +161,9 @@ header {
             align-items: center;
         }
 
-        .fa-moon {
-            color: #f1c40f;
-            font-size: 16px;
-        }
-
+        .fa-moon,
         .fa-sun {
-            color: #f39c12;
+            color: #f1c40f;
             font-size: 16px;
         }
 
@@ -178,13 +184,19 @@ header {
 
         &--right {
             @include flex-box(center, flex-start, 0);
-            i {
+            button {
                 font-size: 2rem;
+                cursor: pointer;
 
                 &:first-child {
                     margin-inline: 2.5rem;
                     display: none;
                 }
+            }
+            .icons {
+                border: none;
+                background: none;
+                outline: none;
             }
             .button {
                 padding: 0.875rem 2.375rem;
@@ -197,16 +209,22 @@ header {
     }
 
     &__content--items {
-        @include positionTL(fixed, 0, -100%);
-        @include hw(100%, 100%);
-        background: rgba(0, 0, 0, 0.4);
+        &.overlay {
+            @include positionTL(fixed, 0, 0);
+            @include hw(100%, 100%);
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 999;
+        }
+
         transition: all 0.5s ease-in-out;
-        z-index: 999;
 
         .menu__items {
-            position: relative;
+            @include positionTL(fixed, 0, -100%);
+            // @include hw(100%, 100%);
+            // position: relative;
             @include hw(100%, 60%);
             background: $primary;
+            transition: all 0.5s ease-in-out;
         }
     }
 
@@ -327,6 +345,7 @@ header {
             border-radius: 50%;
             text-align: center;
             line-height: 60px;
+            color: $black;
             z-index: 9;
             // transform: scale(1);
             animation: pulseButton 2s ease-in-out infinite;
@@ -432,7 +451,7 @@ header {
 
             h4 {
                 color: $white;
-                font-size: 16px;
+                font-size: clamp(20px, 3vw, 24px);
             }
 
             ul {
@@ -441,7 +460,7 @@ header {
                 // list-style: none;
                 li {
                     margin-top: 14px;
-                    font-size: 12px;
+                    font-size: clamp(16px, 2vw, 20px);
                 }
             }
         }
@@ -466,7 +485,7 @@ header {
     }
 }
 
-//whyus
+// whyus
 .whyus {
     p {
         color: $white;
@@ -684,6 +703,10 @@ header {
         li {
             @include typography(clamp(16px, 2vw, 20px), 400);
             margin-top: 8px;
+            color: $white;
+        }
+
+        li a {
             color: $white;
         }
     }

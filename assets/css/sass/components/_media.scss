@@ -24,6 +24,19 @@
             gap: 32px;
         }
     }
+
+    .header {
+        &__search {
+            display: none;
+        }
+        &__content {
+            &--right {
+                button:first-child {
+                    display: block;
+                }
+            }
+        }
+    }
 }
 @media (min-width: 576px) {
     .whyus__items {
@@ -39,17 +52,6 @@
 
     header {
         padding-bottom: 0;
-    }
-
-    .header {
-        &__search {
-            display: none;
-        }
-        &__content {
-            &--right i:first-child {
-                display: block;
-            }
-        }
     }
 
     .hero {
@@ -224,15 +226,16 @@
 
         &__content {
             &--items {
-                position: static;
+                // position: static;
                 flex-direction: row;
                 background: none;
                 // gap: 50px;
                 // color: ;
 
                 .menu__items {
-                    position: relative;
-                    @include hw(100%, 60%);
+                    position: static;
+                    // @include hw(100%, 60%);
+                    // left: 0;
                     width: 100%;
                     background: none;
                 }
@@ -326,17 +329,17 @@
         }
     }
 
-    .trend__card--content {
-        h4 {
-            font-size: 24px;
-        }
+    // .trend__card--content {
+    //     h4 {
+    //         font-size: 24px;
+    //     }
 
-        ul {
-            li {
-                font-size: 18px;
-            }
-        }
-    }
+    //     // ul {
+    //     //     li {
+    //     //         font-size: 18px;
+    //     //     }
+    //     // }
+    // }
 
     .offer {
         &__product {
